@@ -98,6 +98,7 @@ html, body {
     position: relative;
     width: 100%;
     height: 70vh;
+    overflow: hidden;
   }
 
   .text-box {
@@ -147,7 +148,6 @@ html, body {
   .hero-btn:hover {
     background: green;
     transition: .3s;
-    
   }
 
   .image-container {
@@ -165,3 +165,18 @@ html, body {
     height: 100%;
     object-fit: cover;
   }
+
+  .container1 {
+    position: relative;
+    width: 100%;
+    height: 81vh;
+    overflow: hidden;
+  }
+.pokecontainer img{
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  object-position: bottom;
+  border: 5px solid #fff;
+  box-sizing: border-box;
+}
