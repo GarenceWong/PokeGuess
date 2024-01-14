@@ -268,3 +268,20 @@ main.revealed #answer {
 .timer span {
   font-weight: 600;
 }
+
+
+
+/*-----------------Pokedex---------------*/
+
+#pokedex {
+  max-width: 400px;
+  margin: auto;
+  color: #ffffff;
+  text-align: center;
+}
+#pokedex h1{
+  font-size: 60px;
+}
+#pokemon-info {
+  margin-top: 20px;
+}

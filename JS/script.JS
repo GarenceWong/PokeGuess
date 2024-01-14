@@ -1,3 +1,4 @@
+//------------------- Home ---------------------------------//
 const containerElement = document.querySelector('.container1');
 
 containerElement.classList.add('visible');
@@ -74,6 +75,36 @@ window.addEventListener("load", () => {
     function revealPokemon() {
       main.classList.add('revealed');
       textOverlay.textContent = `${gameData.correct.name}!`;
+    }
+
+    //---------------------- Pokedex --------------------//
+
+    function getPokemon() {
+      const pokemonId = document.getElementById('pokemonid').value;
+      const apiUrl = `https://pokeapi.co/api/v2/pokemon/${pokemonId}/`;
+  
+      fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => displayPokemon(data))
+        .catch(error => console.error('Error fetching data:', error));
+    }
+  
+    function displayPokemon(pokemon) {
+      const pokemonInfoDiv = document.getElementById('pokemon-info');
+      pokemonInfoDiv.innerHTML = '';
+  
+      const name = pokemon.name;
+      const imageUrl = pokemon.sprites.front_default;
+  
+      const pokemonImage = document.createElement('img');
+      pokemonImage.src = imageUrl;
+      pokemonImage.alt = name;
+  
+      const pokemonName = document.createElement('h2');
+      pokemonName.textContent = name;
+  
+      pokemonInfoDiv.appendChild(pokemonImage);
+      pokemonInfoDiv.appendChild(pokemonName);
     }
   
   

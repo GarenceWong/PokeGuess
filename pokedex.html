@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <title>PokeGuess</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif; background: url('image/landingpage.jpg') center/cover no-repeat;
+    }
+</style>
+<body>
+    <header class="header">
+        <img src="image/logo.png" alt="Logo" class="logo"/>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="pokedex.html">Pokédex</a>
+        </nav>    
+    </header>
+
+
+    <div id="pokedex">
+        <h1>Pokédex</h1>
+        <label for="pokemonid">Enter Pokémon ID:</label>
+        <input type="number" id="pokemonid" min="1" value="1">
+        <button onclick="getPokemon()">Search</button>
+        <div id="pokemon-info"></div>
+      </div>
+
+
+
+
+
+
+
+    <script src="JS/api.js"></script>
+    <script src="JS/script.js"></script>
+
+</body>
+</html>
