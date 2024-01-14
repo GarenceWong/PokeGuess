@@ -5,12 +5,13 @@
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style.css">
   <title>PokeGuess</title>
-<style>
-  body {
-        font-family: Arial, sans-serif; background: url('image/landingpage.jpg') center/cover no-repeat;
-        margin: 0;
-    }
-</style>
+  <style>
+    body {
+          font-family: Arial, sans-serif; background: url('image/landingpage.jpg') center/cover no-repeat;
+          margin: 0;
+      }
+  </style>
+</head>
 
 <body>
 
@@ -21,38 +22,32 @@
         <a href="index.html">Home</a>
         <a href="pokedex.html">Pokédex</a>
     </nav>
-</header>
-
-    <div class="container1">
-      <div class="pokecontainer">
-        <img src="image/gamepage.png" alt="gamepage">
-      </div>
-
-      <div class="glow">
-        <img src="image/glow1.png" alt="glow">
-      </div>
-
-      <div class="whothat">
-        <img src="image/whothat.png" alt="Whothat">
-      </div>
+    </header>
 
   <main class="fetching">
 
-      <div id="pokeimage">
-        <img id="pokemon-image" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D">
-      </div>
-
-      <div class="options"></div>
-      
-      <div class="timer"></div>
-      
-      <div class="container"></div>
-      
-      <div class="score-container">
-      <div id="user-score"></div>
-
+    <div id="pokemon-container">
+      <img id="pokebd" src="image/gamepage.png" alt="gamepage">
+      <img id="pokemon-image" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D">
     </div>
-    </main>
+
+    <div class="glow">
+      <img src="image/glow1.png" alt="glow">
+    </div>
+
+    <div class="whothat">
+      <img src="image/whothat.png" alt="Whothat">
+    </div>
+
+    <div id="answer">
+      <div id="text-overlay"></div>
+    </div>
+
+    <section id="controls">
+      <button id="play">Play</button>
+      <div id="choices"></div>
+    </section>
+  </main>
 
   <script src="JS/api.js"></script>
   <script src="JS/script.js"></script>

@@ -155,69 +155,125 @@ html, body {
   .image-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
   }
+  /*------------------Game---------------*/
 
-  .container1 {
-    position: relative;
-    width: 100%;
-    height: 81vh;
-    overflow: hidden;
-    transition: transform 0.5s ease-in; 
-    transform: translateY(100%);
-  }
-  .container1.visible {
-    transform: translateY(0);
-  }
-.pokecontainer{
-  background-image: url('image/gamebkgd.jpeg');
+
+
+.glow img{
+  position: absolute;
+  top: 25%;
+  left: 32%;
+  width: 33%;
+  height: 45%;
 }
-.pokecontainer img{
+
+.whothat img{
+  position: absolute;
+  top: 25%;
+  left: 100px;
+  height: 40%;
+  transform: rotate(356deg);
+}
+/*----------------------------API---------------------------------*/
+/*----------------------------------------------------------------*/
+
+#pokemon-container {
+  height: 355px;
+}
+
+#pokebd {
+  position: relative;
   width: 100%;
-  height: 100%;
-  object-fit: fill;
+  height: 81vh;
+  overflow: hidden;
   object-position: bottom;
   border: 5px solid #fff;
   box-sizing: border-box;
 }
 
-.glow img{
-  position: absolute;
-  top: 10%;
-  left: 30%;
-  width: 40%;
-  height: 60%;
+#answer{
+display: none;
 }
 
-.whothat img{
-  position: absolute;
-  top: 60px;
-  left: 90px;
-  height: 50%;
-}
-/*----------------------------API---------------------------------*/
-/*----------------------------------------------------------------*/
 
-#pokimage {
-  height: 355px;
+
+#text-overlay {
+  position: absolute;
+  right: 130px;
+  top: 85%;
+  font-size: 36px;
+  color: red;
+  text-transform: uppercase;
 }
+
+#controls {
+  position: relative;
+  padding: 20px 40px ;
+}
+
+button {
+  background: black;
+  border: none;
+  color: #3e7ae7;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 10px 10px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  box-shadow: 0px 4px 10px 1px;
+  cursor: pointer;
+  transition: all .2s ease-out;
+}
+
+button:hover {
+  box-shadow: 0px 4px 10px 4px;
+  background-color: #fff6d1;
+}
+
+button.correct,
+button.incorrect {
+  color: #d9fcd9;
+  box-shadow: none;
+}
+
+button.correct {
+  background: #0dff0d;
+}
+
+button.incorrect {
+  background: #ea2e25;
+}
+
+#play {
+  position: absolute;
+  top: -100px;
+  left: 63%;
+}
+
 
 #pokemon-image {
-  margin:   15px 50px 50px 60px;
-  transform: scale(4.5);
+  margin: 135px 0 0 140px;
+  transform: scale(3.8);
   filter: brightness(0);
   transition: filter .5s ease-out;
   position: absolute;
-  left: 43%;
-  bottom: 45%;
+  left: 36%;
+  z-index: 1;
 }
 
+main.fetching #pokeball {
+  visibility: visible;
+}
 
 main.fetching #pokemon-image {
   visibility: hidden;
   display: none;
 }
 
+main.fetching #choices {
+  display: none;
+}
 
 main.revealed #pokemon-image {
   filter: none;
@@ -226,48 +282,18 @@ main.revealed #pokemon-image {
 main.revealed #answer {
   display: block;
 }
-.options{
+
+#choices {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 50px;
-}
-.options button {
-  color: #0dff0d;
-  padding: 10px;
-  text-align: center;
-  background-color: black;
-  border: 0.3em solid red;
-  border-radius: 1em;
-  box-shadow: 0 0.5em 0 0 #090029;
-  cursor: pointer;
-}
-.options button:hover {
-  box-shadow: none;
-  transform: translateY(0.6em);
-}
-.options.correct{
-  background: #0dff0d;
-}
-.options.incorrect{
-  background: #ea2e25;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 12px;
+  margin-top: 32;
+  text-align: left;
+  width: 68%;
+  padding-left: 1%;
+  padding-right: 1%;
 }
 
-.options button.correct,
-.options button.incorrect {
-  color: #ffffff;
-  border-color: #090029;
-  box-shadow: 0 0.5em 0 0 #090029;
-}
-
-.score-container {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
-}
-.timer span {
-  font-weight: 600;
-}
 
 
 
