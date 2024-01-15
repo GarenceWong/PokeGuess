@@ -1,6 +1,8 @@
 //------------------- Home ---------------------------------//
 
 
+
+
 //--------------Game Start------------------//
 let gameData;
 const main = document.querySelector('main');
