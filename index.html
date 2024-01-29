@@ -14,9 +14,9 @@
 </style>
 
 <body>
-    <!--Loading Screen-->
+    <!--Loading Screen
     <div class="loader">
-    <img src="image/loader.png" alt="loader"/>
+    <img src="image/loader.png" alt="loader"/>-->
     </div>
     
     <header class="header">
@@ -27,10 +27,6 @@
             <a href="pokedex.html">Pokédex</a>
 
 
-        <div class="menu-toggle" onclick="toggleNavbar()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
         </nav>    
         </div>       
     </header>
@@ -40,14 +36,21 @@
         <div class="text-box">
             <h1>PokéGuess</h1>
             <h3>Can you guess who's that pokemon? Try this entertaining and captivating tool that will test your Pokémon recognition.</h3>
-            <a href="game.html" class="hero-btn" onclick="startGame()">Play</a>
+            <a href="game.html" class="hero-btn">Play</a>
         </div>
         <div class="image-container">
-            <img src="image/jirachi.png" alt="PokeImage">
-          </div>
-     </main>
+    <lottie-player
+        autoplay
+        loop
+        mode="normal"
+        src="https://lottie.host/8526c5b9-e1bb-4c65-810c-38ed995523cc/FbS8HilbKo.json"
+        >
+    </lottie-player>
+     </div>
+     </main> 
 
-     <script src="JS/api.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@0.2.0/dist/lottie-player.js"></script>
+    <script src="JS/api.js"></script>
     <script src="JS/script.js"></script>
  
 </body>

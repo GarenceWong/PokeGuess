@@ -3,6 +3,7 @@
 
 
 
+
 //--------------Game Start------------------//
 let gameData;
 const main = document.querySelector('main');
@@ -10,6 +11,7 @@ const pokemonImage = document.querySelector('#pokemon-image');
 const textOverlay = document.querySelector('#pokename');
 const choices = document.querySelector('#choices');
 const playBtn = document.querySelector('#play');
+const score = document.querySelector("#score");
 playBtn.addEventListener('click', fetchData);
 addAnswerHandler();
 
@@ -20,6 +22,12 @@ async function fetchData() {
   showSilhouette();
   displayChoices();
 }
+
+let points = 0;
+let autoPlayInterval;
+
+playBtn.addEventListener('click', startAutoPlay);
+
 
 function resetImage() {
   pokemonImage.src = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D';
@@ -49,6 +57,7 @@ function addAnswerHandler() {
 
     e.target.classList.add(resultClass);
     revealPokemon();
+
   });
 }
 
@@ -56,6 +65,13 @@ function revealPokemon() {
   main.classList.add('revealed');
   textOverlay.textContent = `${gameData.correct.name}!`;
 }
+
+
+
+
+
+
+
 
 
 

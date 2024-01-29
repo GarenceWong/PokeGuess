@@ -13,9 +13,9 @@ window.getPokeData = async function() {
     }
   };
 };
-
+//Generate random pokemon
 async function getPokemon() {
-  const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151');
+  const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=200');
   const pokemon = await res.json();
   
   return pokemon.results;
@@ -29,7 +29,10 @@ function shuffle(unshuffled) {
   
   return shuffled;
 }
-
+function getNumber(url) {
+  const numberRegEx = /(\d+)\/$/;
+  return (url.match(numberRegEx) || [])[1];
+}
 function get4Pokemon(randomPokemon) {
   return randomPokemon.splice(0, 4);
 }
@@ -39,8 +42,5 @@ function getPokemonImage({ url }) {
   return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${number}.png`;
 };
 
-function getNumber(url) {
-  const numberRegEx = /(\d+)\/$/;
-  return (url.match(numberRegEx) || [])[1];
-}
+
 
