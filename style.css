@@ -166,10 +166,14 @@ lottie-player{
   transform: rotate(356deg);
 }
 
-#scoreDisplay{
+#score{
   color: white;
-  padding-left: 200px;
-  top: 50px;
+  position: absolute;
+  top: 207px;
+  right: 120px;
+  font-size: 42px;
+  font-weight: bold;
+  z-index: 2;
 }
 
 /*----------------------------API---------------------------------*/

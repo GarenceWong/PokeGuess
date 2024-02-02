@@ -20,11 +20,9 @@ playBtn.addEventListener('click', startPlay);
 async function startPlay() {
   resetImage();
   gameData = await window.getPokeData();
-  setTimeout(() => {
   showSilhouette();
   displayChoices();
-}, 500);
-  points = 0; // Reset points at the start of the game
+  points = 0;
   score.textContent = `Score: ${points}/${maxPoints}`;
 
 }
@@ -75,7 +73,10 @@ async function addAnswerHandler() {
 
     if (name === gameData.correct.name) {
       points++;
+      console.log(`Correct! Points: ${points}`);
       score.textContent = `Score: ${points}/${maxPoints}`;
+    }else {
+        console.log(`Incorrect! Points: ${points}`);
     }
     clearTimeout(autoPlayInterval); 
 
@@ -90,7 +91,7 @@ async function addAnswerHandler() {
     }
   });
 }
-choices.addEventListener('click', answerClickHandler);
+
 
 
 
