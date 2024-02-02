@@ -20,21 +20,24 @@ playBtn.addEventListener('click', startPlay);
 async function startPlay() {
   resetImage();
   gameData = await window.getPokeData();
+  setTimeout(() => {
   showSilhouette();
   displayChoices();
-  autoPlayNext();
+}, 500);
   points = 0; // Reset points at the start of the game
   score.textContent = `Score: ${points}/${maxPoints}`;
 
 }
 
 function  autoPlayNext(){
-  autoPlayInterval = setTimeout(async() => {
+  autoPlayInterval = setTimeout(async () => {
     await playNextPokemon();
     resetImage();
+    setTimeout(() => {
     showSilhouette();
     displayChoices();
-  }, 3000);
+  }, 500);
+  }, 1000);
 }
 
 async function playNextPokemon() {
@@ -77,7 +80,8 @@ async function addAnswerHandler() {
     clearTimeout(autoPlayInterval); 
 
 
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve, 5000));
+
 
     if (points === maxPoints) {
       endGame();
