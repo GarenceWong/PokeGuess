@@ -24,7 +24,9 @@ async function fetchData() {
 }
 
 let points = 0;
-let autoPlayInterval;
+const maxPoints = 20;
+
+
 
 playBtn.addEventListener('click', startAutoPlay);
 
