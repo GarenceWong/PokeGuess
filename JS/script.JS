@@ -34,7 +34,7 @@ function  autoPlayNext(){
     resetImage();
     showSilhouette();
     displayChoices();
-  }, 5000);
+  }, 3000);
 }
 
 async function playNextPokemon() {
@@ -74,10 +74,10 @@ async function addAnswerHandler() {
       points++;
       score.textContent = `Score: ${points}/${maxPoints}`;
     }
-    clearTimeout(autoPlayInterval); // Clear the auto-play timeout
+    clearTimeout(autoPlayInterval); 
 
-    // Wait for 3 seconds before moving to the next question
-    await new Promise(resolve => setTimeout(resolve, 3000));
+
+    await new Promise(resolve => setTimeout(resolve, 2000));
 
     if (points === maxPoints) {
       endGame();
