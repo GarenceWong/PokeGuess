@@ -149,13 +149,7 @@ lottie-player{
     transition: .3s;
   }
 
-
-
-
   /*------------------Game---------------*/
-
-
-
 .glow img{
   position: absolute;
   top: 25%;
@@ -171,8 +165,14 @@ lottie-player{
   height: 40%;
   transform: rotate(356deg);
 }
+
+#scoreDisplay{
+  color: white;
+  padding-left: 200px;
+  top: 50px;
+}
+
 /*----------------------------API---------------------------------*/
-/*----------------------------------------------------------------*/
 
 #pokemon-container {
   height: 355px;
@@ -289,9 +289,6 @@ main.revealed #answer {
   padding-left: 1%;
   padding-right: 1%;
 }
-
-
-
 
 /*-----------------Pokedex---------------*/
 
