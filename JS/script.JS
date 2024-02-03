@@ -1,8 +1,3 @@
-//------------------- Home ---------------------------------//
-
-
-
-
 
 //--------------Game Start------------------//
 let gameData;
@@ -12,9 +7,11 @@ const textOverlay = document.querySelector('#pokename');
 const choices = document.querySelector('#choices');
 const playBtn = document.querySelector('#play');
 const score = document.querySelector("#score");
+const popupContainer = document.getElementById('popup-container');
 let points = 0;
 const maxPoints = 20;
 let autoPlayInterval
+
 playBtn.addEventListener('click', startPlay);
 
 async function startPlay() {
@@ -24,6 +21,7 @@ async function startPlay() {
   displayChoices();
   points = 0;
   score.textContent = `Score: ${points}/${maxPoints}`;
+
 
 }
 
@@ -46,6 +44,7 @@ function resetImage() {
   pokemonImage.src = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D';
   main.classList.add('fetching');
   main.classList.remove('revealed');
+  choices.innerHTML = '';
 }
 
 function showSilhouette() {
@@ -63,36 +62,46 @@ function displayChoices() {
   addAnswerHandler();
 }
 
+let isAnswerSelected = false;
+
 async function addAnswerHandler() {
-  choices.addEventListener('click', async (e) => {
-    const { name } = e.target.dataset;
-    const resultClass = (name === gameData.correct.name) ? 'correct' : 'incorrect';
-
-    e.target.classList.add(resultClass);
-    revealPokemon();
-
-    if (name === gameData.correct.name) {
-      points++;
-      console.log(`Correct! Points: ${points}`);
-      score.textContent = `Score: ${points}/${maxPoints}`;
-    }else {
-        console.log(`Incorrect! Points: ${points}`);
-    }
-    clearTimeout(autoPlayInterval); 
-
-
-    await new Promise(resolve => setTimeout(resolve, 5000));
-
-
-    if (points === maxPoints) {
-      endGame();
-    } else {
-      autoPlayNext();
-    }
-  });
+  choices.addEventListener('click', handleAnswerClick);
 }
 
+async function handleAnswerClick(e) {
+  if (isAnswerSelected) {
+    return;
+  }
 
+  isAnswerSelected = true;
+
+  const { name } = e.target.dataset;
+  const resultClass = (name === gameData.correct.name) ? 'correct' : 'incorrect';
+
+  e.target.classList.add(resultClass);
+  revealPokemon();
+
+  if (name === gameData.correct.name) {
+    points++;
+    console.log(`Correct! Points: ${points}`);
+    score.textContent = `Score: ${points}/${maxPoints}`;
+  } else {
+    console.log(`Incorrect! Points: ${points}`);
+  }
+
+  clearTimeout(autoPlayInterval);
+
+  await new Promise(resolve => setTimeout(resolve, 1000));
+
+  if (points >= maxPoints) {
+    endGame();
+  } else {
+    autoPlayNext();
+  }
+
+  isAnswerSelected = false;
+  choices.removeEventListener('click', handleAnswerClick);
+}
 
 
 function revealPokemon() {
@@ -101,43 +110,27 @@ function revealPokemon() {
 }
 
 async function endGame() {
+  console.log('endGame function called');
   clearInterval(autoPlayInterval);
+  const popupScore = document.getElementById('popup-score');
+  popupScore.textContent = points;
 
+  if (points >= maxPoints) {
+    popupContainer.classList.remove('hidden');
+  }
 
-  // Display congratulatory popup
-  const popupHTML = `
-    <div id="popup">
-      <h2>Congratulations!</h2>
-      <p>Your score is ${points}.</p>
-      <button onclick="goToHomepage()">Go to Homepage</button>
-      <button onclick="restartGame()">Restart Game</button>
-    </div>
-  `;
-
-  main.innerHTML += popupHTML;
 }
-addAnswerHandler();
-
-
-
-
-
-
-
-
-
-
-
-
 function goToHomepage() {
-  // Implement logic to navigate to the homepage
-  // e.g., window.location.href = 'homepage.html';
+  window.location.href = 'index.html';
 }
 
 function restartGame() {
-  // Implement logic to restart the game
-  // e.g., fetchData();
+  window.location.href = 'game.html';
 }
+
+
+
+
 
 
 
