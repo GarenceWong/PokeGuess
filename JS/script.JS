@@ -9,7 +9,8 @@ const playBtn = document.querySelector('#play');
 const score = document.querySelector("#score");
 const popupContainer = document.getElementById('popup-container');
 let points = 0;
-const maxPoints = 20;
+const maxPoints = 5;
+let questionCount = 0;
 let autoPlayInterval
 
 playBtn.addEventListener('click', startPlay);
@@ -20,6 +21,7 @@ async function startPlay() {
   showSilhouette();
   displayChoices();
   points = 0;
+  questionCount = 0;
   score.textContent = `Score: ${points}/${maxPoints}`;
 
 
@@ -93,11 +95,14 @@ async function handleAnswerClick(e) {
 
   await new Promise(resolve => setTimeout(resolve, 1000));
 
-  if (points >= maxPoints) {
+  questionCount++;
+
+  if (questionCount >= 5) {
     endGame();
   } else {
     autoPlayNext();
   }
+
 
   isAnswerSelected = false;
   choices.removeEventListener('click', handleAnswerClick);
@@ -115,11 +120,9 @@ async function endGame() {
   const popupScore = document.getElementById('popup-score');
   popupScore.textContent = points;
 
-  if (points >= maxPoints) {
     popupContainer.classList.remove('hidden');
   }
 
-}
 function goToHomepage() {
   window.location.href = 'index.html';
 }
