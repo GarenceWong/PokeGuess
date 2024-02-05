@@ -9,7 +9,7 @@ const playBtn = document.querySelector('#play');
 const score = document.querySelector("#score");
 const popupContainer = document.getElementById('popup-container');
 let points = 0;
-const maxPoints = 5;
+const maxPoints = 20;
 let questionCount = 0;
 let autoPlayInterval
 
@@ -23,8 +23,6 @@ async function startPlay() {
   points = 0;
   questionCount = 0;
   score.textContent = `Score: ${points}/${maxPoints}`;
-
-
 }
 
 function  autoPlayNext(){
@@ -97,7 +95,7 @@ async function handleAnswerClick(e) {
 
   questionCount++;
 
-  if (questionCount >= 5) {
+  if (questionCount >= 20) {
     endGame();
   } else {
     autoPlayNext();
@@ -115,12 +113,29 @@ function revealPokemon() {
 }
 
 async function endGame() {
-  console.log('endGame function called');
-  clearInterval(autoPlayInterval);
-  const popupScore = document.getElementById('popup-score');
-  popupScore.textContent = points;
-
-    popupContainer.classList.remove('hidden');
+  //debugging
+    console.log('endGame called');
+    clearInterval(autoPlayInterval);
+    
+  
+    var modal = document.getElementById("gameoverPopUp");
+    var span = document.getElementsByClassName("close")[0];
+    var finalScore = document.getElementById("final-score");
+    
+    finalScore.textContent = points; // Display the final score in the modal
+    modal.style.display = "block"; // Show the modal
+    
+    // click span, close button
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    
+    // outside popup modal
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
   }
 
 function goToHomepage() {

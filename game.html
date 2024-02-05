@@ -51,13 +51,17 @@
 
     <div id="score">Score: 0/20</div>
 
-    <div id="popup-container" class="hidden">
-      <div id="popup">
-        <h2>Congratulations!</h2>
-        <p>Your score is <span id="popup-score"></span>.</p>
-        <button onclick="goToHomepage()">Homepage</button>
-        <button onclick="restartGame()">Restart</button>
-      </div>
+    <!-- Modal -->
+<div id="gameoverPopUp" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Congratulations!</h2>
+    <p>Your score is <span id="final-score"></span>.</p>
+    <button id="button1" onclick="goToHomepage()">Homepage</button>
+    <button id="button2" onclick="restartGame()">Restart</button>
+  </div>
+</div>
     
   </main>
 
