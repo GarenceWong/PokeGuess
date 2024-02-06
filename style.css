@@ -148,7 +148,65 @@ lottie-player{
     background: green;
     transition: .3s;
   }
+  .glow {
+    display: none;
+  }
 
+
+  @media(max-width: 600px){
+
+    lottie-player{
+      width: 220px;
+      display: flex;
+      padding-left: 25%;
+      padding-top: 37%;
+    }
+    
+    .header img {
+      margin-left: 20px;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navbar a {
+      margin: 10px 0;
+    }
+  
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+
+    }
+  
+    .text-box {
+      width: 80%;
+      top: 33%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  
+    .text-box h1 {
+      font-size: 48px;
+      padding-left: 30px;
+    }
+  
+    .text-box h3 {
+      margin-right: 0;
+      padding-left: 0;
+      padding-top: 80%;
+    }
+  
+    .hero-btn {
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 20px 0;
+    }
+  }
   /*------------------Game---------------*/
 .glow img{
   position: absolute;
@@ -210,11 +268,12 @@ lottie-player{
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto;
+  overflow: hidden;
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.4);
   align-items: center;
 }
+
 
 .modal-content {
   background-color: #fefefe;
@@ -277,7 +336,6 @@ display: none;
   font-size: 36px;
   color: #ea2e25;
   text-transform: uppercase;
-  
 }
 
 #controls {
@@ -362,6 +420,119 @@ main.revealed #answer {
   width: 68%;
   padding-left: 1%;
   padding-right: 1%;
+}
+#mobileGifContainer {
+  display: none;
+}
+
+@media(max-width: 600px){
+
+  .glow img{
+    position: absolute;
+    top: 25%;
+    left: 36%;
+    width: 70%;
+    height: auto;
+    transform: translateX(-50%);
+  }
+  .whothat img {
+    display: none;
+  }
+
+  #score {
+    position: absolute;
+    top: 530px;
+    right: 140px;
+    font-size: 20px;
+    bottom: 20px;
+    text-align: center;
+    color:white;
+  }
+
+
+  #play {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-85%);
+  }
+
+
+  #pokemon-image {
+    filter: brightness(0);
+    transition: filter 0.5s ease-out;
+    margin: 150px 0 140px;
+    transform: scale(3);
+    position: absolute;
+    left: 100px;
+}
+
+#choices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 12px;
+  margin-top: 113px;
+  text-align: center;
+  width: 0%;
+  
+}
+
+button {
+  width: 100%;
+  max-width: 150px;
+  transform: translateX(-22%);
+  z-index: 100;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#pokename {
+  position: absolute;
+  right: 28px;
+  top: 85%;
+  font-size: 15px;
+  color: #ea2e25;
+  text-transform: uppercase;
+  bottom: 10px;
+}
+#gameoverPopUP{
+  z-index: 300;
+}
+#gameoverPopUp button {
+  margin-top: 10px;
+  margin-right: 0;
+  margin-left: 30;
+}
+.modal {
+  position: fixed;
+  overflow: hidden;
+
+}
+
+.modal-content {
+  margin: 70% auto;
+  padding: 20px;
+  width: 70%;
+  position: relative;
+  
+}
+
+.modal-content p {
+  font-size: 24px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+#mobileGifContainer {
+  display: block;
+  margin-left: 10px;
+  position: absolute;
+    top: 80px;
+    right: 0;
+}
 }
 
 /*-----------------Pokedex---------------*/

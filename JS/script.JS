@@ -95,7 +95,7 @@ async function handleAnswerClick(e) {
 
   questionCount++;
 
-  if (questionCount >= 20) {
+  if (questionCount >= 1) {
     endGame();
   } else {
     autoPlayNext();
@@ -145,6 +145,17 @@ function goToHomepage() {
 function restartGame() {
   window.location.href = 'game.html';
 }
+
+// Image popup //
+
+var glowElement = document.querySelector('.glow');
+document.getElementById('play').addEventListener('click', function() {
+  glowElement.style.display = 'block';
+});
+
+
+
+
 
 
 
