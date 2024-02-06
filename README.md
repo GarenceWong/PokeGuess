@@ -47,9 +47,13 @@ Every section of the website is being tested by using this process:
 6. Pokemon name:
    After choosing the choices for the pokemon name be it correct or incorrect the pokemon correct name will appear at the bottom right of the page.
 
-This website is also made responsive, when on mobile view the homepage will not have the lottie animation.
+7. PopUp box:
+   When players answered 20 questions a Popup box will appear with Congratulations! and display the player score, there will also be 2 buttons 1 to homepage and another to restart the game.
+   
 
-For the Game Page the choices will be displayed in 2 rows.
+This website is also made responsive, when on mobile view for homepage the lottie animation will be in the middle of Pokeguess and brief description of the game.
+
+For the Game Page the choices will be displayed in 2 rows, and the score will be move to the game interface page above the start button.
 
 The pokedex page will be collide to smaller layout to fit the screen resolutions.
 
@@ -69,6 +73,8 @@ The pokedex page will be collide to smaller layout to fit the screen resolutions
 - The glowing  background effect behind the pokemon image is taken from (https://assets.zyrosite.com/cdn-cgi/image/format=auto,fit=crop/mv0550KwN4sV61wX/pngwing.com-7-AE02LvMQX2FDOyE2.png)
 
 - The game page interface background is taken from (https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/313745df-5764-4514-8a1e-c965de2931a7/ddwvp73-e9a77a9e-cb0a-44bd-938a-0bd294009913.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzMxMzc0NWRmLTU3NjQtNDUxNC04YTFlLWM5NjVkZTI5MzFhN1wvZGR3dnA3My1lOWE3N2E5ZS1jYjBhLTQ0YmQtOTM4YS0wYmQyOTQwMDk5MTMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.9PMLdZ46fuC_jtHfkVaxUlBGMttiVAZHoeRy_3UFZKo)
+
+- The GIF animation for mobile view popup from (https://media.tenor.com/qa-671LbHMoAAAAj/charizard-shiny.gif)
 
 ## Acknowledgements
 - I received inspiration for this website from the Pokemon Anime TV Series where after advertisment breaks it will return back with the question Who That Pokemon? and displaying the silhouette. (https://www.pokemon.com/us/animation)

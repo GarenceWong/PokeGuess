@@ -95,7 +95,7 @@ async function handleAnswerClick(e) {
 
   questionCount++;
 
-  if (questionCount >= 1) {
+  if (questionCount >= 20) {
     endGame();
   } else {
     autoPlayNext();
