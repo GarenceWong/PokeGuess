@@ -55,6 +55,8 @@ The pokedex page will be collide to smaller layout to fit the screen resolutions
 
 ## Credit
 ### Content
+- The pokemon silhouette, pokemon image and the choices for the name is all generated randomly with the use of PokeAPI (https://pokeapi.co/)
+
 - The pokeball animation at the homepage is taken from LottieFiles.com (https://lottie.host/embed/8526c5b9-e1bb-4c65-810c-38ed995523cc/FbS8HilbKo.json)
 
 ### Media
