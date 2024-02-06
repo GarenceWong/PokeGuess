@@ -1,6 +1,6 @@
 # PokeGuess
 
-Link to the webpage: 
+Link to the webpage: https://garencewong.github.io/PokeGuess/
 
 Link to the Video:
 
