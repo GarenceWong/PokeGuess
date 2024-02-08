@@ -543,10 +543,10 @@ button {
   align-items: center;
   color: #ffffff;
   justify-content: center;
-  width: 100%; /* Ensure the pokedex container spans the full width */
-  max-width: 1200px; /* Limit the maximum width for better readability */
-  margin: 0 auto; /* Center the pokedex container horizontally */
-  padding: 0 20px; /* Add some padding to the sides */
+  width: 100%; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 0 20px;
 }
 
 #pokedex a {
