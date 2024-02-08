@@ -2,7 +2,7 @@
 
 Link to the webpage: https://garencewong.github.io/PokeGuess/
 
-Link to the Video:
+Link to the Video: https://drive.google.com/file/d/1wnAvPH9Lzph9AvcuSFwVZrMmxfcSZ24P/view?usp=sharing
 
 A pokemon guessing game website that allows users to guess a Pokemon based on its appearance. The user is presented with an image of the Pokemon silhouette and player have to guess to 20 questions of the name of the pokemon and see how much they will get from random generated pokemon.
 
