@@ -7,7 +7,7 @@ Link to the Video:
 A pokemon guessing game website that allows users to guess a Pokemon based on its appearance. The user is presented with an image of the Pokemon silhouette and player have to guess to 20 questions of the name of the pokemon and see how much they will get from random generated pokemon.
 
 ## Design Process
-This website is dedicated to pokemon fans that want to test their knowledge about the pokemon.
+This website is dedicated to pokemon enthusiasts that want to enjoy a pokemon themed guessing game to test their knowledge about the pokemon.
 
 ## Features
 This website is made out of 3 parts, the home page, game page and the pokedex page.

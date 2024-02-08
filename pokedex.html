@@ -22,17 +22,34 @@
     </header>
 
 
-    <div id="pokedex">
+    
+    <div id="pokedex" class="pokedex">
+      <form id="form" autocomplete="off" action="#">
+        <div class="autocomplete" style="width:300px;">
         <h1>Pokédex</h1>
-        <label for="pokemonid">Enter Pokémon ID:</label>
-        <input type="number" id="pokemonid" min="1" value="1">
-        <button onclick="getPokemon()">Search</button>
-        <div id="pokemon-info"></div>
-      </div>
-
-
-    <script src="./JS/api.JS"></script>
-    <script src="./JS/script.JS"></script>
+        <input type="text" id="search" class="search" placeholder="Search your Pokemon">
+        <div id="suggestions" class="suggestions"></div>
+      </form>
+      <div id="pokemon-info"></div>
+    </div>
+    
+    <template id="pokemon-card-template">
+        <div class="pokemon">
+          <div class="img-container">
+            <img src="" alt="" />
+          </div>
+          <div class="info">
+            <span class="number"></span>
+            <h3 class="name"></h3>
+            <small class="type">Type: <span></span></small>
+          </div>
+          <div class="stats">
+            <h4>Stats:</h4>
+          </div>
+        </div>
+      </template>
+      
+    <script src="./JS/dex.JS"></script>
 
 </body>
 </html>
