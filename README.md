@@ -18,7 +18,7 @@ and lastly is the play button, this button will take the users to the game page.
 
 Game Page: This the page where the game starts when the player click on the start button, the pokemon silhouette and pokemon name choices will appear so player will start to guess the name of pokemon matching to the silhouette. Once the player guess the name of the pokemon the correct name of the pokemon will appear on the bottom right afterwards it will auto move to the next question after 3 seconds, if the player havent answer it will not move to the next questions. There will be a score to record the users points until 20 questions is answered. At the end of the game there will be a popup to show the players score and 2 button 1 to return to homepage and the other button to restart the game.
 
-Pokedex Page: This page will list all the pokemon...
+Pokedex Page: This page will list all the pokemon  in the Pokedex with their name, image, type, and stats of the pokemon.
 
 ## Features Left to Implement
  Time Attack: Add a different game mode where by the players have to guess as many Pokemon in a set amount of time as possible, making it more challenging and fun.
